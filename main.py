@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import openai
-import services
+import services,os
 from streamlit_chat import message
 
-openai.api_key = "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"
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 # completion = openai.ChatCompletion.create(
 #   model="gpt-3.5-turbo-16k",

@@ -1,5 +1,7 @@
 from functools import reduce
 import streamlit as st
+from dotenv import load_dotenv
+load_dotenv()
 
 csv_data = """
 category,name,Regular Price,price,model,stutus,Product code,Key_Features
@@ -189,8 +191,9 @@ def formatted_column_description(pdf_obj, description):
 import pandas as pd
 from io import StringIO
 import json, openai
+import os
 
-openai.api_key = "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"
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 # Sample CSV-formatted string
 # csv_data = """Name,Age,Location
