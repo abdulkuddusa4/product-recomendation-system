@@ -191,9 +191,7 @@ def formatted_column_description(pdf_obj, description):
 import pandas as pd
 from io import StringIO
 import json, openai
-import os
 
-openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 # Sample CSV-formatted string
 # csv_data = """Name,Age,Location

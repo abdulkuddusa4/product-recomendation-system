@@ -5,7 +5,6 @@ import openai
 import services,os
 from streamlit_chat import message
 
-openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 # completion = openai.ChatCompletion.create(
 #   model="gpt-3.5-turbo-16k",
